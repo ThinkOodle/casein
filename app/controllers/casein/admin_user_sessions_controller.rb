@@ -11,7 +11,7 @@ module Casein
     end
   
     def create
-      @admin_user_session = Casein::AdminUserSession.new params[:casein_admin_user_session]
+      @admin_user_session = Casein::AdminUserSession.new casein_admin_user_params
       if @admin_user_session.save
         redirect_back_or_default :controller => :casein, :action => :index
       else
@@ -30,6 +30,10 @@ module Casein
       if current_user
         redirect_to :controller => :casein, :action => :index
       end
+    end
+
+    def casein_admin_user_params
+      params.require(:casein_admin_user_session).permit(:login,:password,:remember_me)
     end
 
   end
