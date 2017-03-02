@@ -17,8 +17,11 @@ body {
 }
 
 .brand {
-	margin-top: 20px;
-	margin-bottom: 40px;
+  margin: 0 auto 20px auto;
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .form-group .checkbox-inline label {
