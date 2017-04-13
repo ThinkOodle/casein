@@ -8,7 +8,7 @@
   	<% casein_config_stylesheet_includes.each do |stylesheet| %>
   		<%= stylesheet_link_tag(stylesheet) %>
   	<% end %>
-    <%= stylesheet_link_tag("casein/print"), media: "print" %>
+    <%= stylesheet_link_tag "casein/print", media: "print" %>
   	
   	<% casein_config_javascript_includes.each do |javascript| %>
   		<%= javascript_include_tag(javascript) %>
