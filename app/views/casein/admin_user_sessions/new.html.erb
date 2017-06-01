@@ -44,7 +44,7 @@
 	
 <% end %>
 
-<%= form_tag casein_password_reset_url do %>
+<%= form_tag casein_password_reset_path do %>
 	<div id="recover" style="display:none;">
 		<div class="form-group">
 			<%= text_field_tag :recover_email, params[:recover_email], :placeholder => "Your email address", :class => "form-control input-lg" %>
